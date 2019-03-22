@@ -61,12 +61,12 @@ ip route
 - `-4`或`-6` 只显示ipv4或ipv6的套接字；
 - `-t`  只显示tcp套接字；
 - `-u`  只显示udp套接字；
-- `-s`  显示socket摘要；
+- `-s`  显示所有socket使用的摘要信息；
 
 ```shell
-ss -a |grep http  #http服务
+ss -l |grep http  #监听中的http服务
 ss -s #Sockets 摘要
-ss -ltu #处于监听状态的tcp和udp连接
+ss -tulp4 #ipv4地址中处于监听状态的tcp和udp连接
 ```
 
 ## telnet

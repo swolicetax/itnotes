@@ -28,11 +28,11 @@ strings /lib64/libc.so.6 | grep GLIBC
 执行以下命令立即修复为旧版本的glibc：
 
 ```shell
-LD_PRELOAD=/lib64/libc-2.15.so ln -sf /lib64/libc-2.15.so libc.so.6
+LD_PRELOAD=/lib64/libc-2.12.so ln -sf /lib64/libc-2.12.so libc.so.6
 # unset LD_PRELOAD  #去掉LD_PRELOAD
 ```
 
-这里的2.15应该以原来系统存在的glibc版本更改。
+这里的2.12应该以原来系统存在的glibc版本更改。
 
 # 编译安装glibc
 
@@ -56,7 +56,7 @@ LD_PRELOAD=/lib64/libc-2.15.so ln -sf /lib64/libc-2.15.so libc.so.6
    make install
    
    #if检查以下动态文件存在与否 
-   if [[ -f  ]]
+   if [[ -f $prefix/lib/libc-2.14.so ]]
    then
      export LD_LIBRARY_PATH=$prefix/lib:$LD_LIBRARY_PATH
    fi

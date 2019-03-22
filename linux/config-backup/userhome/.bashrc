@@ -205,6 +205,8 @@ alias matrix='cmatrix'
 #starwar
 alias starwar='telnet towel.blinkenlights.nl'
 
+#ssl key log
+SSLKEYLOGFILE=$PWD/ssl.log
 #=======
 # my scripts PATH
 [[ -d ~/Documents/scripts ]] && export PATH=~/Documents/scripts:$PATH
